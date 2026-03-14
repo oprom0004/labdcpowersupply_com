@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import ClientPage from './ClientPage';
 
+import whereToBuyConfig from '@/content/where-to-buy.json';
+
 export const metadata: Metadata = {
-  title: 'WhereToBuy | Lab DC Power Supply',
-  description: 'Comprehensive guide and review for laboratory DC power supplies.',
+  title: whereToBuyConfig.metaTitle,
+  description: whereToBuyConfig.metaDescription,
 };
 
 export default function Page() {

@@ -1,0 +1,140 @@
+{
+    "metaTitle": "Lab DC Power Supply Guide | Expert Reviews & Comparisons",
+    "metaDescription": "Independent research, reviews, and application notes for mid-to-high-end laboratory DC power supplies. Variable and programmable benchtop units.",
+    "hero": {
+        "microLabel": "HIGH-PRECISION SERIES",
+        "titlePrefix": "High-Precision",
+        "titleMain": "Lab DC Power Supply",
+        "specs": [
+            {
+                "label": "MAX RIPPLE & NOISE",
+                "value": "< 0.35 mVrms"
+            },
+            {
+                "label": "READBACK RESOLUTION",
+                "value": "1 mV / 0.1 mA"
+            },
+            {
+                "label": "REMOTE INTERFACE",
+                "value": "LXI / GPIB / USB"
+            }
+        ],
+        "description": "The definitive standard for premium test equipment. From ultra-low noise <strong class=\"text-zinc-200 font-medium\">linear supplies</strong> for RF characterization, to high-density <strong class=\"text-zinc-200 font-medium\">programmable units</strong> for automated test racks (ATE).",
+        "ctaPrimary": {
+            "text": "Check Pricing",
+            "link": "https://variabledcpowersupply.com"
+        },
+        "ctaSecondary": {
+            "text": "Read Guide",
+            "link": "/how-to-choose"
+        }
+    },
+    "features": {
+        "title": "Why Choose Premium DC Power Supplies?",
+        "subtitle": "When accuracy is non-negotiable, mid-to-high-end laboratory power supplies deliver the stability and control your experiments demand.",
+        "items": [
+            {
+                "id": "01",
+                "readout": "< 0.35 mVrms",
+                "title": "Ultra-Low Ripple & Noise",
+                "desc": "Clean power delivery essential for sensitive analog and digital circuitry testing."
+            },
+            {
+                "id": "02",
+                "readout": "1 mV / 0.1 mA",
+                "title": "High Resolution & Accuracy",
+                "desc": "Precise voltage and current programming with micro-volt/micro-amp readback capabilities."
+            },
+            {
+                "id": "03",
+                "readout": "OVP / OCP / OTP",
+                "title": "Advanced Protection",
+                "desc": "OVP, OCP, and OTP mechanisms to safeguard your expensive Device Under Test (DUT)."
+            }
+        ]
+    },
+    "industries": {
+        "title": "Engineered for Your Industry",
+        "subtitle": "Our DC bench power supplies are trusted across critical sectors where precision and reliability are paramount.",
+        "items": [
+            {
+                "title": "RF & Communications",
+                "desc": "Ultra-low noise linear supplies for sensitive transceiver testing.",
+                "icon": "📡"
+            },
+            {
+                "title": "Automotive & EV",
+                "desc": "High-power autoranging units for battery simulation and motor drives.",
+                "icon": "🚗"
+            },
+            {
+                "title": "Semiconductor",
+                "desc": "High-resolution readback for precise component characterization.",
+                "icon": "🔬"
+            },
+            {
+                "title": "ATE Systems",
+                "desc": "Fully programmable units with LAN/LXI and SCPI support.",
+                "icon": "⚙️"
+            }
+        ]
+    },
+    "bestSeller": {
+        "label": "Industry Workhorse",
+        "badge": "Best Seller",
+        "model": "eTM-22020C",
+        "titlePrefix": "The Definitive Standard for",
+        "titleSuffix": "Daily Bench Testing.",
+        "description": "Not every project requires micro-volt precision, but every bench needs unwavering reliability. The eTM-22020C delivers robust, continuous high-voltage power with an intuitive quad-display interface, making it the most cost-effective workhorse for production lines, testing centers, and automotive applications.",
+        "specs": [
+            {
+                "label": "Display",
+                "value": "Dual LED",
+                "sub": "V / A / W / R Simultaneous"
+            },
+            {
+                "label": "Controls",
+                "value": "Coarse & Fine",
+                "sub": "Independent adjustment knobs"
+            },
+            {
+                "label": "Protection",
+                "value": "OVP / OCP",
+                "sub": "Over-voltage & Over-current"
+            },
+            {
+                "label": "Durability",
+                "value": "24/7 Rated",
+                "sub": "Intelligent cooling fan"
+            }
+        ],
+        "cta": {
+            "text": "View Full Specifications",
+            "link": "https://variabledcpowersupply.com/220v-dc-power-supplies/"
+        }
+    },
+    "bottomCta": {
+        "title": "Ready to upgrade your lab?",
+        "description": "Explore our full catalog of mid-to-high-end variable DC power supplies at our main portal.",
+        "buttonText": "Check Online Stock & Pricing",
+        "link": "https://variabledcpowersupply.com"
+    },
+    "faqs": [
+        {
+            "question": "What makes a DC lab power supply different from standard adapters?",
+            "answer": "A <strong>DC lab power supply</strong> (often called a <strong>DC bench power supply</strong>) is designed for high precision, stability, and reliability in an electronics lab. Unlike standard adapters, lab-grade units feature ultra-low ripple and noise (PARD), high-resolution voltage and current programming, and advanced protection mechanisms to safeguard sensitive components."
+        },
+        {
+            "question": "Why should I choose a programmable DC power supply?",
+            "answer": "<strong>Programmable DC power supplies</strong> allow you to automate testing sequences, log data, and control the unit remotely via interfaces like USB, LAN (LXI), RS-232, or GPIB using SCPI commands. This is essential for repetitive testing, burn-in processes, and integration into larger Automated Test Equipment (ATE) systems."
+        },
+        {
+            "question": "What industries typically use your high-end power supplies?",
+            "answer": "Our mid-to-high-end power supplies are widely used in semiconductor testing, aerospace and defense, automotive electronics (including EV battery simulation), electrochemical research, and academic laboratories where precision and reliability are non-negotiable."
+        },
+        {
+            "question": "How do I know which power supply is right for my application?",
+            "answer": "Choosing the right supply depends on your required voltage/current range, acceptable ripple noise, response time, and programming needs. We recommend reading our <a href='/how-to-choose' class='text-brand-600 hover:underline'>Complete Guide to Choosing a Lab Power Supply</a> to understand the key specifications that matter for your specific use case."
+        }
+    ]
+}

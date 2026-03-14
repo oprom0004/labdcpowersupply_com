@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import ClientPage from './ClientPage';
 
+import pricingConfig from '@/content/pricing.json';
+
 export const metadata: Metadata = {
-  title: 'Price | Lab DC Power Supply',
-  description: 'Comprehensive guide and review for laboratory DC power supplies.',
+  title: pricingConfig.metaTitle,
+  description: pricingConfig.metaDescription,
 };
 
 export default function Page() {

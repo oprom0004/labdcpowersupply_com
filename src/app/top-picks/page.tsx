@@ -1,11 +1,13 @@
 import { Metadata } from 'next';
 import ClientPage from './ClientPage';
 
-const year = new Date().getFullYear();
+import topPicksConfig from '@/content/top-picks.json';
+
+const year = new Date().getFullYear().toString();
 
 export const metadata: Metadata = {
-  title: `5 Best Lab DC Power Supplies in ${year} | Variable & Programmable`,
-  description: `Comprehensive expert reviews and comparisons of the best lab DC power supplies in ${year}. Find the right variable or programmable bench supply for your budget.`,
+  title: topPicksConfig.metaTitle.replace('{year}', year),
+  description: topPicksConfig.metaDescription.replace('{year}', year),
   alternates: {
     canonical: '/top-picks',
   },

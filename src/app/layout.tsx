@@ -2,21 +2,22 @@ import { Metadata } from 'next';
 import { ExternalLink } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { siteConfig } from '@/lib/config';
 
 import './globals.css';
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://labdcpowersupply.com'),
+    metadataBase: new URL(siteConfig.url),
     title: {
-        default: 'Lab DC Power Supply Guide | Expert Reviews & Comparisons',
-        template: '%s | LabDCPowerSupply.com',
+        default: siteConfig.seo.defaultTitle,
+        template: siteConfig.seo.titleTemplate,
     },
-    description: 'Independent research, reviews, and application notes for mid-to-high-end laboratory DC power supplies.',
+    description: siteConfig.seo.defaultDescription,
     alternates: {
         canonical: '/',
     },
     openGraph: {
-        siteName: 'LabDCPowerSupply.com',
+        siteName: siteConfig.siteName,
         locale: 'en_US',
         type: 'website',
     },
@@ -43,14 +44,14 @@ export default function RootLayout({
     const websiteSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        name: 'Lab DC Power Supply Guide',
-        url: 'https://labdcpowersupply.com',
-        description: 'Independent research, reviews, and application notes for mid-to-high-end laboratory DC power supplies.',
+        name: siteConfig.brandName,
+        url: siteConfig.url,
+        description: siteConfig.description,
         potentialAction: {
             '@type': 'SearchAction',
             target: {
                 '@type': 'EntryPoint',
-                urlTemplate: 'https://labdcpowersupply.com/?q={search_term_string}',
+                urlTemplate: `${siteConfig.url}/?q={search_term_string}`,
             },
             'query-input': 'required name=search_term_string',
         },
@@ -59,11 +60,11 @@ export default function RootLayout({
     const orgSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'Lab DC Power Supply Guide',
-        url: 'https://labdcpowersupply.com',
+        name: siteConfig.brandName,
+        url: siteConfig.url,
         contactPoint: {
             '@type': 'ContactPoint',
-            email: 'contact@variabledcpowersupply.com',
+            email: siteConfig.contactEmail,
             contactType: 'customer service',
         },
     };
@@ -83,9 +84,9 @@ export default function RootLayout({
             <body className="min-h-screen flex flex-col font-sans">
                 {/* Top Banner */}
                 <div className="bg-zinc-950 text-zinc-400 text-[10px] py-2 px-4 text-center font-mono tracking-[0.1em] uppercase border-b border-zinc-800">
-                    Premium Laboratory DC Power Supplies | Visit our main site:{' '}
-                    <a href="https://variabledcpowersupply.com" target="_blank" rel="nofollow noopener noreferrer" className="text-amber-500 hover:text-amber-400 inline-flex items-center ml-1 transition-colors font-bold">
-                        variabledcpowersupply.com <ExternalLink className="w-3 h-3 ml-1" />
+                    {siteConfig.banner.text}{' '}
+                    <a href={siteConfig.banner.link} target="_blank" rel="nofollow noopener noreferrer" className="text-amber-500 hover:text-amber-400 inline-flex items-center ml-1 transition-colors font-bold">
+                        {siteConfig.banner.linkText} <ExternalLink className="w-3 h-3 ml-1" />
                     </a>
                 </div>
 

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Mail, ExternalLink } from 'lucide-react';
+import { siteConfig } from '@/lib/config';
 
 export default function Footer() {
     return (
@@ -11,17 +12,17 @@ export default function Footer() {
                     <div className="lg:col-span-1">
                         <div className="flex items-center gap-2.5 mb-6">
                             <span className="font-extrabold text-2xl tracking-tight">
-                                <span className="text-amber-500">LabDC</span>
-                                <span className="text-white">PowerSupply</span>
-                                <span className="text-zinc-500 font-medium">.com</span>
+                                <span className="text-amber-500">{siteConfig.brandLogo.text1}</span>
+                                <span className="text-white">{siteConfig.brandLogo.text2}</span>
+                                <span className="text-zinc-500 font-medium">{siteConfig.brandLogo.suffix}</span>
                             </span>
                         </div>
                         <p className="text-sm text-zinc-500 leading-relaxed mb-6">
-                            An independent resource for engineers and researchers. We provide in-depth guides, reviews, and application notes for mid-to-high-end laboratory DC power supplies.
+                            {siteConfig.description}
                         </p>
                         <div className="flex items-center gap-2 text-sm text-zinc-500">
                             <Mail className="w-4 h-4" />
-                            <a href="mailto:contact@variabledcpowersupply.com" className="hover:text-amber-500 transition-colors">contact@variabledcpowersupply.com</a>
+                            <a href={`mailto:${siteConfig.contactEmail}`} className="hover:text-amber-500 transition-colors">{siteConfig.contactEmail}</a>
                         </div>
                     </div>
 
@@ -29,10 +30,11 @@ export default function Footer() {
                     <div>
                         <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">Knowledge Base</h3>
                         <ul className="space-y-4 text-sm text-zinc-400">
-                            <li><Link href="/how-to-choose" className="hover:text-amber-500 transition-colors">How to Choose a Power Supply</Link></li>
-                            <li><Link href="/applications" className="hover:text-amber-500 transition-colors">Industry Applications</Link></li>
-                            <li><Link href="/top-picks" className="hover:text-amber-500 transition-colors">Top Picks & Reviews</Link></li>
-                            <li><Link href="/price" className="hover:text-amber-500 transition-colors">Pricing Guide</Link></li>
+                            {siteConfig.footer.knowledgeBase.map((link) => (
+                                <li key={link.path}>
+                                    <Link href={link.path} className="hover:text-amber-500 transition-colors">{link.name}</Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -40,26 +42,13 @@ export default function Footer() {
                     <div>
                         <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">Equipment Catalog</h3>
                         <ul className="space-y-4 text-sm text-zinc-400">
-                            <li>
-                                <a href="https://variabledcpowersupply.com/high-precision-dc-power-supply/" target="_blank" rel="nofollow noopener noreferrer" className="hover:text-amber-500 transition-colors flex items-center group">
-                                    High Precision Power Supplies <ExternalLink className="w-3 h-3 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://variabledcpowersupply.com/programmable-dc-power-supply/" target="_blank" rel="nofollow noopener noreferrer" className="hover:text-amber-500 transition-colors flex items-center group">
-                                    Programmable DC Supplies <ExternalLink className="w-3 h-3 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://variabledcpowersupply.com/high-power-dc-power-supplies" target="_blank" rel="nofollow noopener noreferrer" className="hover:text-amber-500 transition-colors flex items-center group">
-                                    High Power DC Supplies <ExternalLink className="w-3 h-3 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://variabledcpowersupply.com/high-voltage-dc-power-supply/" target="_blank" rel="nofollow noopener noreferrer" className="hover:text-amber-500 transition-colors flex items-center group">
-                                    High Voltage DC Supplies <ExternalLink className="w-3 h-3 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </a>
-                            </li>
+                            {siteConfig.footer.equipmentCatalog.map((link) => (
+                                <li key={link.link}>
+                                    <a href={link.link} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-amber-500 transition-colors flex items-center group">
+                                        {link.name} <ExternalLink className="w-3 h-3 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -67,10 +56,11 @@ export default function Footer() {
                     <div>
                         <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">Legal & Trust</h3>
                         <ul className="space-y-4 text-sm text-zinc-400">
-                            <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                            <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
-                            <li><Link href="/where-to-buy" className="hover:text-white transition-colors">Where to Buy</Link></li>
+                            {siteConfig.footer.legal.map((link) => (
+                                <li key={link.path}>
+                                    <Link href={link.path} className="hover:text-white transition-colors">{link.name}</Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -78,10 +68,10 @@ export default function Footer() {
 
                 <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-zinc-600 text-xs">
-                        &copy; {new Date().getFullYear()} Lab DC Power Supply Guide. All rights reserved.
+                        &copy; {new Date().getFullYear()} {siteConfig.footer.copyright}
                     </p>
                     <p className="text-zinc-600 text-xs">
-                        Independent research and reviews for engineering professionals.
+                        {siteConfig.footer.tagline}
                     </p>
                 </div>
             </div>

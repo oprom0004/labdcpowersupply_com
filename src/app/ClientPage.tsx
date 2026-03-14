@@ -1,11 +1,23 @@
 ﻿"use client";
+import React from 'react';
 import Link from 'next/link';
 
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
-import { ArrowRight, ShieldCheck, Activity, Settings2, Zap, ChevronDown } from 'lucide-react';
+import {
+  ArrowRight,
+  ChevronDown,
+  Zap,
+  ShieldCheck,
+  Activity,
+  Settings,
+  Cpu,
+  ChevronRight,
+  ExternalLink
+} from 'lucide-react';
 
 import FAQSection from '@/components/FAQSection';
+import homeConfig from '@/content/home.json';
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null);
@@ -17,26 +29,7 @@ export default function Home() {
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacityText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-
-
-  const homeFaqs = [
-    {
-      question: "What makes a DC lab power supply different from standard adapters?",
-      answer: "A <strong>DC lab power supply</strong> (often called a <strong>DC bench power supply</strong>) is designed for high precision, stability, and reliability in an electronics lab. Unlike standard adapters, lab-grade units feature ultra-low ripple and noise (PARD), high-resolution voltage and current programming, and advanced protection mechanisms to safeguard sensitive components."
-    },
-    {
-      question: "Why should I choose a programmable DC power supply?",
-      answer: "<strong>Programmable DC power supplies</strong> allow you to automate testing sequences, log data, and control the unit remotely via interfaces like USB, LAN (LXI), RS-232, or GPIB using SCPI commands. This is essential for repetitive testing, burn-in processes, and integration into larger Automated Test Equipment (ATE) systems."
-    },
-    {
-      question: "What industries typically use your high-end power supplies?",
-      answer: "Our mid-to-high-end power supplies are widely used in semiconductor testing, aerospace and defense, automotive electronics (including EV battery simulation), electrochemical research, and academic laboratories where precision and reliability are non-negotiable."
-    },
-    {
-      question: "How do I know which power supply is right for my application?",
-      answer: "Choosing the right supply depends on your required voltage/current range, acceptable ripple noise, response time, and programming needs. We recommend reading our <a href='/how-to-choose' class='text-brand-600 hover:underline'>Complete Guide to Choosing a Lab Power Supply</a> to understand the key specifications that matter for your specific use case."
-    }
-  ];
+  const homeFaqs = homeConfig.faqs;
 
   return (
     <div className="w-full">
@@ -62,42 +55,35 @@ export default function Home() {
               {/* Micro-label */}
               <div className="inline-flex items-center gap-3 px-3 py-1.5 bg-zinc-900/80 border border-zinc-800 text-zinc-400 text-[10px] font-mono font-bold uppercase tracking-[0.2em] mb-10">
                 <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></div>
-                HIGH-PRECISION SERIES
+                {homeConfig.hero.microLabel}
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl text-white tracking-tighter mb-8 leading-[1.05]">
-                <span className="font-light text-zinc-400 block mb-2">High-Precision</span>
-                <span className="font-bold">Lab DC Power Supply</span>
+                <span className="font-light text-zinc-400 block mb-2">{homeConfig.hero.titlePrefix}</span>
+                <span className="font-bold">{homeConfig.hero.titleMain}</span>
               </h1>
 
               {/* Hardcore Specs - Data First */}
               <div className="flex flex-col sm:flex-row gap-6 mb-10 border-l-2 border-amber-500 pl-5">
-                <div>
-                  <div className="text-[10px] text-zinc-500 font-mono tracking-widest mb-1">MAX RIPPLE & NOISE</div>
-                  <div className="text-sm text-zinc-200 font-mono font-medium">&lt; 0.35 mVrms</div>
-                </div>
-                <div className="hidden sm:block w-px h-8 bg-zinc-800"></div>
-                <div>
-                  <div className="text-[10px] text-zinc-500 font-mono tracking-widest mb-1">READBACK RESOLUTION</div>
-                  <div className="text-sm text-zinc-200 font-mono font-medium">1 mV / 0.1 mA</div>
-                </div>
-                <div className="hidden sm:block w-px h-8 bg-zinc-800"></div>
-                <div>
-                  <div className="text-[10px] text-zinc-500 font-mono tracking-widest mb-1">REMOTE INTERFACE</div>
-                  <div className="text-sm text-zinc-200 font-mono font-medium">LXI / GPIB / USB</div>
-                </div>
+                {homeConfig.hero.specs.map((spec, idx) => (
+                  <React.Fragment key={idx}>
+                    {idx > 0 && <div className="hidden sm:block w-px h-8 bg-zinc-800"></div>}
+                    <div>
+                      <div className="text-[10px] text-zinc-500 font-mono tracking-widest mb-1">{spec.label}</div>
+                      <div className="text-sm text-zinc-200 font-mono font-medium">{spec.value}</div>
+                    </div>
+                  </React.Fragment>
+                ))}
               </div>
 
-              <p className="text-lg text-zinc-400 mb-12 max-w-2xl leading-relaxed font-light">
-                The definitive standard for premium test equipment. From ultra-low noise <strong className="text-zinc-200 font-medium">linear supplies</strong> for RF characterization, to high-density <strong className="text-zinc-200 font-medium">programmable units</strong> for automated test racks (ATE).
-              </p>
+              <p className="text-lg text-zinc-400 mb-12 max-w-2xl leading-relaxed font-light" dangerouslySetInnerHTML={{ __html: homeConfig.hero.description }} />
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://variabledcpowersupply.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-amber-500 text-zinc-950 rounded-sm font-bold text-sm tracking-widest uppercase hover:bg-amber-400 transition-colors">
-                  Check Pricing <ArrowRight className="w-4 h-4" />
+                <a href={homeConfig.hero.ctaPrimary.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-amber-500 text-zinc-950 rounded-sm font-bold text-sm tracking-widest uppercase hover:bg-amber-400 transition-colors">
+                  {homeConfig.hero.ctaPrimary.text} <ArrowRight className="w-4 h-4" />
                 </a>
-                <Link href="/how-to-choose" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-zinc-300 border border-zinc-700 rounded-sm font-bold text-sm tracking-widest uppercase hover:bg-zinc-800 hover:text-white transition-colors">
-                  Read Guide
+                <Link href={homeConfig.hero.ctaSecondary.link} className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-zinc-300 border border-zinc-700 rounded-sm font-bold text-sm tracking-widest uppercase hover:bg-zinc-800 hover:text-white transition-colors">
+                  {homeConfig.hero.ctaSecondary.text}
                 </Link>
               </div>
             </motion.div>
@@ -119,7 +105,7 @@ export default function Home() {
                 <div className="w-full relative z-10 flex flex-col items-center justify-center min-h-[300px]">
                   <img
                     src="/hero-product.png"
-                    alt="eTM-K1560PL+ Programmable DC Power Supply"
+                    alt={`${homeConfig.hero.titlePrefix} ${homeConfig.hero.titleMain}`}
                     className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative z-20"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
@@ -207,31 +193,12 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Choose Premium DC Power Supplies?</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">When accuracy is non-negotiable, mid-to-high-end laboratory power supplies deliver the stability and control your experiments demand.</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">{homeConfig.features.title}</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">{homeConfig.features.subtitle}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                id: "01",
-                readout: "< 0.35 mVrms",
-                title: "Ultra-Low Ripple & Noise",
-                desc: "Clean power delivery essential for sensitive analog and digital circuitry testing."
-              },
-              {
-                id: "02",
-                readout: "1 mV / 0.1 mA",
-                title: "High Resolution & Accuracy",
-                desc: "Precise voltage and current programming with micro-volt/micro-amp readback capabilities."
-              },
-              {
-                id: "03",
-                readout: "OVP / OCP / OTP",
-                title: "Advanced Protection",
-                desc: "OVP, OCP, and OTP mechanisms to safeguard your expensive Device Under Test (DUT)."
-              }
-            ].map((feature, idx) => (
+            {homeConfig.features.items.map((feature, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
@@ -270,39 +237,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Applications Section (Lightweight) */}
+      {/* Industries Section (Lightweight) */}
       <section className="py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Engineered for Your Industry</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">{homeConfig.industries.title}</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Our DC bench power supplies are trusted across critical sectors where precision and reliability are paramount.
+              {homeConfig.industries.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "RF & Communications",
-                desc: "Ultra-low noise linear supplies for sensitive transceiver testing.",
-                icon: "📡"
-              },
-              {
-                title: "Automotive & EV",
-                desc: "High-power autoranging units for battery simulation and motor drives.",
-                icon: "🚗"
-              },
-              {
-                title: "Semiconductor",
-                desc: "High-resolution readback for precise component characterization.",
-                icon: "🔬"
-              },
-              {
-                title: "ATE Systems",
-                desc: "Fully programmable units with LAN/LXI and SCPI support.",
-                icon: "⚙️"
-              }
-            ].map((app, idx) => (
+            {homeConfig.industries.items.map((app, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
@@ -348,7 +294,7 @@ export default function Home() {
 
               <img
                 src="/bestseller-product.png"
-                alt="eTM-22020C High Voltage DC Power Supply"
+                alt={`${homeConfig.bestSeller.model} High Voltage DC Power Supply`}
                 className="w-full h-auto object-contain drop-shadow-xl relative z-20 transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
@@ -356,63 +302,49 @@ export default function Home() {
                   e.currentTarget.nextElementSibling?.classList.add('flex');
                 }}
               />
-              {/* Local Development Placeholder removed */}
 
               {/* Specs Overlay */}
               <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm border border-zinc-200 px-3 py-2 shadow-sm z-30">
                 <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-1">Model</div>
-                <div className="font-mono font-bold text-zinc-900">eTM-22020C</div>
+                <div className="font-mono font-bold text-zinc-900">{homeConfig.bestSeller.model}</div>
               </div>
             </div>
 
             {/* Right: Technical Specs & Copy */}
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="px-2 py-1 bg-zinc-900 text-white text-[10px] font-mono font-bold uppercase tracking-widest">Industry Workhorse</span>
-                <span className="px-2 py-1 bg-amber-100 text-amber-900 text-[10px] font-mono font-bold uppercase tracking-widest">Best Seller</span>
+                <span className="px-2 py-1 bg-zinc-900 text-white text-[10px] font-mono font-bold uppercase tracking-widest">{homeConfig.bestSeller.label}</span>
+                <span className="px-2 py-1 bg-amber-100 text-amber-900 text-[10px] font-mono font-bold uppercase tracking-widest">{homeConfig.bestSeller.badge}</span>
               </div>
 
               <h2 className="text-4xl font-bold text-zinc-900 mb-6 tracking-tight">
-                The Definitive Standard for <br />
-                <span className="text-zinc-400 font-light">Daily Bench Testing.</span>
+                {homeConfig.bestSeller.titlePrefix} <br />
+                <span className="text-zinc-400 font-light">{homeConfig.bestSeller.titleSuffix}</span>
               </h2>
 
               <p className="text-zinc-600 text-lg leading-relaxed mb-10">
-                Not every project requires micro-volt precision, but every bench needs unwavering reliability. The eTM-22020C delivers robust, continuous high-voltage power with an intuitive quad-display interface, making it the most cost-effective workhorse for production lines, testing centers, and automotive applications.
+                {homeConfig.bestSeller.description}
               </p>
 
               {/* Spec Grid */}
               <div className="grid grid-cols-2 gap-px bg-zinc-200 border border-zinc-200">
-                <div className="bg-white p-6">
-                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest mb-2">Display</div>
-                  <div className="font-mono font-bold text-zinc-900 text-xl">Dual LED</div>
-                  <div className="text-xs text-zinc-500 mt-1">V / A / W / R Simultaneous</div>
-                </div>
-                <div className="bg-white p-6">
-                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest mb-2">Controls</div>
-                  <div className="font-mono font-bold text-zinc-900 text-xl">Coarse & Fine</div>
-                  <div className="text-xs text-zinc-500 mt-1">Independent adjustment knobs</div>
-                </div>
-                <div className="bg-white p-6">
-                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest mb-2">Protection</div>
-                  <div className="font-mono font-bold text-zinc-900 text-xl">OVP / OCP</div>
-                  <div className="text-xs text-zinc-500 mt-1">Over-voltage & Over-current</div>
-                </div>
-                <div className="bg-white p-6">
-                  <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest mb-2">Durability</div>
-                  <div className="font-mono font-bold text-zinc-900 text-xl">24/7 Rated</div>
-                  <div className="text-xs text-zinc-500 mt-1">Intelligent cooling fan</div>
-                </div>
+                {homeConfig.bestSeller.specs.map((spec, idx) => (
+                  <div key={idx} className="bg-white p-6">
+                    <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest mb-2">{spec.label}</div>
+                    <div className="font-mono font-bold text-zinc-900 text-xl">{spec.value}</div>
+                    <div className="text-xs text-zinc-500 mt-1">{spec.sub}</div>
+                  </div>
+                ))}
               </div>
 
               <div className="mt-10">
                 <a
-                  href="https://variabledcpowersupply.com/220v-dc-power-supplies/"
+                  href={homeConfig.bestSeller.cta.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-bold text-zinc-900 uppercase tracking-widest hover:text-amber-600 transition-colors group"
                 >
-                  View Full Specifications
+                  {homeConfig.bestSeller.cta.text}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
@@ -426,17 +358,17 @@ export default function Home() {
       <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-brand-500 rounded-full blur-3xl opacity-20 pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to upgrade your lab?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{homeConfig.bottomCta.title}</h2>
           <p className="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
-            Explore our full catalog of mid-to-high-end variable DC power supplies at our main portal.
+            {homeConfig.bottomCta.description}
           </p>
           <a
-            href="https://variabledcpowersupply.com"
+            href={homeConfig.bottomCta.link}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-brand-500 text-white rounded-lg font-medium text-lg hover:bg-brand-400 transition-colors shadow-lg shadow-brand-500/30"
           >
-            Check Online Stock & Pricing
+            {homeConfig.bottomCta.buttonText}
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>

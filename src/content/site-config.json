@@ -1,0 +1,115 @@
+{
+    "siteName": "LabDCPowerSupply.com",
+    "brandName": "Lab DC Power Supply Guide",
+    "brandLogo": {
+        "text1": "LabDC",
+        "text2": "PowerSupply",
+        "suffix": ".com"
+    },
+    "description": "Independent research, reviews, and application notes for mid-to-high-end laboratory DC power supplies.",
+    "url": "https://labdcpowersupply.com",
+    "contactEmail": "contact@variabledcpowersupply.com",
+    "social": {
+        "store": "https://variabledcpowersupply.com"
+    },
+    "seo": {
+        "defaultTitle": "Lab DC Power Supply Guide | Expert Reviews & Comparisons",
+        "titleTemplate": "%s | LabDCPowerSupply.com",
+        "defaultDescription": "Independent research, reviews, and application notes for mid-to-high-end laboratory DC power supplies."
+    },
+    "navigation": {
+        "links": [
+            {
+                "name": "Home",
+                "path": "/"
+            },
+            {
+                "name": "Top Picks & Reviews",
+                "path": "/top-picks"
+            },
+            {
+                "name": "Applications",
+                "path": "/applications"
+            },
+            {
+                "name": "Price",
+                "path": "/price"
+            },
+            {
+                "name": "How to Choose",
+                "path": "/how-to-choose"
+            },
+            {
+                "name": "Where to Buy",
+                "path": "/where-to-buy"
+            }
+        ],
+        "cta": {
+            "text": "Online Store",
+            "link": "https://variabledcpowersupply.com"
+        }
+    },
+    "footer": {
+        "knowledgeBase": [
+            {
+                "name": "How to Choose a Power Supply",
+                "path": "/how-to-choose"
+            },
+            {
+                "name": "Industry Applications",
+                "path": "/applications"
+            },
+            {
+                "name": "Top Picks & Reviews",
+                "path": "/top-picks"
+            },
+            {
+                "name": "Pricing Guide",
+                "path": "/price"
+            }
+        ],
+        "equipmentCatalog": [
+            {
+                "name": "High Precision Power Supplies",
+                "link": "https://variabledcpowersupply.com/high-precision-dc-power-supply/"
+            },
+            {
+                "name": "Programmable DC Supplies",
+                "link": "https://variabledcpowersupply.com/programmable-dc-power-supply/"
+            },
+            {
+                "name": "High Power DC Supplies",
+                "link": "https://variabledcpowersupply.com/high-power-dc-power-supplies"
+            },
+            {
+                "name": "High Voltage DC Supplies",
+                "link": "https://variabledcpowersupply.com/high-voltage-dc-power-supply/"
+            }
+        ],
+        "legal": [
+            {
+                "name": "About Us",
+                "path": "/about"
+            },
+            {
+                "name": "Privacy Policy",
+                "path": "/privacy"
+            },
+            {
+                "name": "Terms of Service",
+                "path": "/terms"
+            },
+            {
+                "name": "Where to Buy",
+                "path": "/where-to-buy"
+            }
+        ],
+        "copyright": "Lab DC Power Supply Guide. All rights reserved.",
+        "tagline": "Independent research and reviews for engineering professionals."
+    },
+    "banner": {
+        "text": "Premium Laboratory DC Power Supplies | Visit our main site: ",
+        "linkText": "variabledcpowersupply.com",
+        "link": "https://variabledcpowersupply.com"
+    }
+}

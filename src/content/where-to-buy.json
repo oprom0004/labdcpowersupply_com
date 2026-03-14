@@ -1,0 +1,56 @@
+{
+    "metaTitle": "Where to Buy Lab DC Power Supplies | Official Channels",
+    "metaDescription": "Official purchasing channels for mid-to-high-end variable and programmable lab DC power supplies. Warranty and authentic equipment guarantee.",
+    "title": "Where to Buy",
+    "description": "Secure your mid-to-high-end laboratory DC power supplies through our official channels for guaranteed authenticity, warranty, and support.",
+    "officialStore": {
+        "title": "Official Online Store",
+        "description": "The fastest and most reliable way to purchase is directly through our main portal. We offer the complete catalog of premium lab power supplies with real-time inventory and pricing.",
+        "features": [
+            "Direct manufacturer warranty",
+            "Technical pre-sales support",
+            "Secure online checkout",
+            "Global shipping options"
+        ],
+        "cta": {
+            "text": "Check Online Stock & Pricing",
+            "link": "https://variabledcpowersupply.com"
+        }
+    },
+    "valueProps": [
+        {
+            "title": "Authorized & Authentic",
+            "description": "Purchasing through our main site guarantees you receive genuine, factory-calibrated equipment, avoiding counterfeit or refurbished units sold as new."
+        },
+        {
+            "title": "Secure Shipping",
+            "description": "High-end lab equipment requires careful handling. We use specialized freight and courier services to ensure your precision instruments arrive safely."
+        }
+    ],
+    "faqs": [
+        {
+            "question": "Do purchases include a Calibration Certificate?",
+            "answer": "Yes, all our mid-to-high-end laboratory DC power supplies come with a standard factory calibration certificate. If your industry requires strict compliance, we also offer <strong>NIST-traceable calibration</strong> options at the time of purchase."
+        },
+        {
+            "question": "What is the international shipping process for heavy power supplies?",
+            "answer": "High-precision linear power supplies can be extremely heavy due to their internal transformers. We partner with specialized freight and international couriers (DHL, FedEx, UPS) to ensure safe, palletized (when necessary) delivery worldwide. Shipping costs and estimated customs times are calculated at checkout on our main portal."
+        },
+        {
+            "question": "How does the warranty and technical support work?",
+            "answer": "Purchasing through our official channels guarantees you receive the full manufacturer's warranty (typically 1 to 3 years, depending on the model). You also gain direct access to our engineering support team to help with SCPI programming, rack integration, and troubleshooting."
+        },
+        {
+            "question": "Can I return a power supply if it doesn't meet my testing requirements?",
+            "answer": "We offer a standard return window for unused equipment in its original packaging. However, because lab power supplies are precision instruments, restocking fees may apply. We highly recommend consulting with our pre-sales engineers or reading our <a href='/how-to-choose' class='text-brand-600 hover:underline'>Selection Guide</a> to ensure you choose the right model the first time."
+        }
+    ],
+    "enterprise": {
+        "title": "Enterprise & Institutional Buyers",
+        "description": "Need to issue a Purchase Order (PO), require a formal quote, or outfitting an entire laboratory? Our B2B sales team at variabledcpowersupply.com is ready to assist.",
+        "cta": {
+            "text": "Contact Enterprise Sales",
+            "link": "https://variabledcpowersupply.com"
+        }
+    }
+}

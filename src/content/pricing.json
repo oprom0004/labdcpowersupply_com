@@ -1,0 +1,92 @@
+{
+    "metaTitle": "Lab DC Power Supply Pricing Guide",
+    "metaDescription": "Understand mid-to-high-end laboratory DC power supply pricing tiers and what drives equipment costs.",
+    "hero": {
+        "title": "Laboratory DC Power Supply Pricing",
+        "description": "Mid-to-high-end laboratory power supplies are investments in precision. Understand the pricing tiers and what drives the cost of premium equipment."
+    },
+    "tiers": [
+        {
+            "name": "Mid-Range Lab",
+            "price": "$500 - $1,500",
+            "description": "Ideal for general R&D, education, and standard electronic testing requiring reliable, clean power.",
+            "features": [
+                "Linear & Advanced Switching topologies",
+                "Basic programmability (USB/RS232)",
+                "Standard ripple & noise specs (<3mVrms)",
+                "Single or dual output channels"
+            ]
+        },
+        {
+            "name": "High-End Precision",
+            "price": "$1,500 - $5,000",
+            "description": "For critical applications, semiconductor testing, and automated test equipment (ATE) systems.",
+            "features": [
+                "Ultra-low noise linear designs (<1mVrms)",
+                "High-resolution readback (1mV/0.1mA)",
+                "Full LAN/LXI, GPIB, USB interfaces",
+                "Advanced arbitrary waveform generation",
+                "Multi-channel isolated outputs"
+            ],
+            "popular": true
+        },
+        {
+            "name": "Specialized / High Power",
+            "price": "$5,000+",
+            "description": "High-voltage, high-current, or highly specialized source measure units (SMUs) for advanced research.",
+            "features": [
+                "High power density (kW range)",
+                "Source Measure Unit (SMU) capabilities",
+                "Battery simulation features",
+                "Regenerative power capabilities",
+                "Custom rack-mount systems"
+            ]
+        }
+    ],
+    "factors": [
+        {
+            "title": "Precision & Stability",
+            "description": "The ability to maintain a rock-steady voltage under dynamic loads and provide micro-volt/micro-amp resolution and readback. Higher precision components and sophisticated calibration drive the primary cost difference."
+        },
+        {
+            "title": "Ripple & Noise Control",
+            "description": "Engineering a 'silent' output requires high-quality filtering and shielding. Models with ripple under 0.35mVrms cost significantly more than general-purpose bench supplies."
+        },
+        {
+            "title": "Programming & Connectivity",
+            "description": "LXI-compliant LAN interfaces, GPIB support, and high-speed data logging capabilities add hardware and licensing costs but are essential for automation."
+        },
+        {
+            "title": "Power Density",
+            "description": "Packing high power (kW+) into small rack-mount form factors (1U/2U) requires advanced thermal management and high-efficiency switching technologies."
+        }
+    ],
+    "faqs": [
+        {
+            "id": "q1",
+            "question": "Why is there such a large price gap between brands?",
+            "answer": "Tier 1 brands like Keysight, Rohde & Schwarz, and Keithley carry a premium due to their long-term stability, industry-leading transient response times, and globally recognized calibration standards. Mid-tier brands like Rigol and Siglent offer excellent features for a fraction of the price, making them ideal for budget-conscious labs."
+        },
+        {
+            "id": "q2",
+            "question": "Should I buy a used high-end power supply to save money?",
+            "answer": "Used equipment (e.g., from eBay or reputable dealers like Keysight Used) can be a great value, but ensure it includes a fresh calibration certificate. An uncalibrated precision power supply can lead to misleading test results that cost more in the long run."
+        },
+        {
+            "id": "q3",
+            "question": "Does more power always cost more?",
+            "answer": "Generally, yes, but precision costs more than raw wattage. A 50W ultra-low-noise linear supply can be more expensive than a 500W general-purpose switching supply because of the engineering required for clean output."
+        },
+        {
+            "id": "q4",
+            "question": "What is the ROI of a programmable power supply?",
+            "answer": "The ROI comes from time savings. A programmable unit integrated into an automated test script (Python/LabVIEW) can perform characterization tests in minutes that would take an engineer hours to perform manually with a basic supply."
+        }
+    ],
+    "bottomCta": {
+        "title": "Equip Your Lab with the Best",
+        "description": "Mid-to-high-end power supplies are an investment in the accuracy and reliability of your work. Explore our curated selection of top-tier variable and programmable units.",
+        "buttonText": "Check Pricing & Availability",
+        "link": "https://variabledcpowersupply.com"
+    }
+}

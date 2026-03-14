@@ -1,0 +1,68 @@
+{
+    "metaTitle": "Best Lab DC Power Supplies of {year} | Expert Reviews",
+    "metaDescription": "Our curated list of the best laboratory DC power supplies for {year}. Top picks for precision linear, programmable switching, and high-power ATE units.",
+    "title": "Best Lab DC Power Supplies of {year}",
+    "description": "Our top picks for high-precision <strong>variable</strong> and <strong>programmable</strong> units for every engineering budget. Whether you need an ultra-low noise linear supply or a high-density ATE unit, find the perfect match for your <strong>benchtop</strong>.",
+    "topPicks": [
+        {
+            "id": "best-overall",
+            "badge": "Best Overall Precision",
+            "name": "Premium Linear Series",
+            "specs": "30V / 3A —Triple Output",
+            "description": "The undisputed king of clean power. In our latest <strong>dc lab power supply review</strong>, this series delivered an astonishing <0.35mVrms ripple. Perfect for sensitive analog and RF testing.",
+            "features": [
+                "Fully isolated independent channels",
+                "1mV / 0.1mA readback resolution",
+                "Standard USB/LAN (LXI) interfaces"
+            ],
+            "link": "https://variabledcpowersupply.com",
+            "variant": "primary"
+        },
+        {
+            "id": "best-value",
+            "badge": "Best Value Programmable",
+            "name": "Advanced Switching Series",
+            "specs": "60V / 10A —Autoranging",
+            "description": "If you need a versatile <strong>electronics lab dc power supply</strong> that won't break the budget, this autoranging unit replaces multiple traditional supplies while maintaining excellent transient response.",
+            "features": [
+                "Constant Power (Autoranging) output",
+                "Built-in arbitrary waveform generator",
+                "Compact 1U half-rack form factor"
+            ],
+            "link": "https://variabledcpowersupply.com",
+            "variant": "outline"
+        },
+        {
+            "id": "best-ate",
+            "badge": "Best High Power / ATE",
+            "name": "High-Density System Power",
+            "specs": "Up to 1500W —Single Output",
+            "description": "Designed for battery simulation, motor testing, and automated test equipment (ATE) racks. This is the <strong>best dc lab power supply</strong> for high-current industrial applications.",
+            "features": [
+                "High power density (1.5kW in 1U)",
+                "Adjustable slew rates for voltage/current",
+                "Analog programming and monitoring"
+            ],
+            "link": "https://variabledcpowersupply.com",
+            "variant": "outline"
+        }
+    ],
+    "faqSection": {
+        "title": "DC Lab Power Supply Reviews & Buying FAQs",
+        "description": "Common questions from our readers when selecting the best power supply for their bench.",
+        "faqs": [
+            {
+                "question": "What is the best DC lab power supply for a beginner?",
+                "answer": "While many beginners look for a cheap 12V supply, the <strong>best DC lab power supply</strong> for starting out is a 30V/5A variable switching power supply. It offers enough voltage headroom for most Arduino, Raspberry Pi, and basic electronics projects without breaking the bank."
+            },
+            {
+                "question": "Are expensive linear power supplies worth the money?",
+                "answer": "Yes, if your work involves sensitive analog circuits, audio amplifiers, or RF design. In any <strong>DC lab power supply review</strong>, linear supplies consistently score highest for ultra-low ripple and noise. If you are just powering digital logic boards, a high-quality switching supply is usually sufficient."
+            },
+            {
+                "question": "Which brands make the best electronics lab DC power supplies?",
+                "answer": "Top-tier brands in the mid-to-high-end space include Keysight (formerly Agilent/HP), Rohde & Schwarz, Keithley (Tektronix), and B&K Precision. For excellent price-to-performance ratios in the mid-range, Rigol and Siglent are highly recommended."
+            }
+        ]
+    }
+}

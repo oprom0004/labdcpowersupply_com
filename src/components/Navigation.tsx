@@ -3,20 +3,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ExternalLink } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { siteConfig } from '@/lib/config';
 
 export default function Navigation() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const pathname = usePathname();
 
-    const navLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'Top Picks & Reviews', path: '/top-picks' },
-        { name: 'Applications', path: '/applications' },
-        { name: 'Price', path: '/price' },
-        { name: 'How to Choose', path: '/how-to-choose' },
-        { name: 'Where to Buy', path: '/where-to-buy' },
-    ];
+    const navLinks = siteConfig.navigation.links;
 
     const isActive = (path: string) => pathname === path;
 
@@ -28,9 +22,9 @@ export default function Navigation() {
                         <div className="flex items-center">
                             <Link href="/" className="flex items-center gap-2.5 group">
                                 <span className="font-extrabold text-2xl tracking-tight">
-                                    <span className="text-amber-500">LabDC</span>
-                                    <span className="text-zinc-900">PowerSupply</span>
-                                    <span className="text-zinc-400 font-medium">.com</span>
+                                    <span className="text-amber-500">{siteConfig.brandLogo.text1}</span>
+                                    <span className="text-zinc-900">{siteConfig.brandLogo.text2}</span>
+                                    <span className="text-zinc-400 font-medium">{siteConfig.brandLogo.suffix}</span>
                                 </span>
                             </Link>
                         </div>
@@ -48,12 +42,12 @@ export default function Navigation() {
                                 </Link>
                             ))}
                             <a
-                                href="https://variabledcpowersupply.com"
+                                href={siteConfig.navigation.cta.link}
                                 target="_blank"
                                 rel="nofollow noopener noreferrer"
                                 className="inline-flex items-center justify-center px-4 py-2 border border-zinc-800 text-sm font-bold tracking-widest uppercase rounded-sm text-amber-500 bg-zinc-950 hover:bg-zinc-900 hover:border-amber-500/50 shadow-sm transition-all"
                             >
-                                Online Store
+                                {siteConfig.navigation.cta.text}
                             </a>
                         </div>
 
@@ -79,20 +73,20 @@ export default function Navigation() {
                                     href={link.path}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className={`block px-3 py-2 rounded-md text-base font-medium ${isActive(link.path)
-                                            ? 'bg-brand-50 text-brand-600'
-                                            : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                                        ? 'bg-brand-50 text-brand-600'
+                                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                                         }`}
                                 >
                                     {link.name}
                                 </Link>
                             ))}
                             <a
-                                href="https://variabledcpowersupply.com"
+                                href={siteConfig.navigation.cta.link}
                                 target="_blank"
                                 rel="nofollow noopener noreferrer"
                                 className="block px-3 py-2 rounded-md text-base font-medium text-brand-600 hover:bg-brand-50"
                             >
-                                Visit Online Store &rarr;
+                                Visit {siteConfig.navigation.cta.text} &rarr;
                             </a>
                         </div>
                     </div>
