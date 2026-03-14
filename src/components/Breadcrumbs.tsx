@@ -1,9 +1,12 @@
-import { Link, useLocation } from 'react-router-dom';
+"use client";
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ChevronRight, Home } from 'lucide-react';
 
-export function Breadcrumbs() {
-  const location = useLocation();
-  const pathnames = location.pathname.split('/').filter((x) => x);
+export default function Breadcrumbs() {
+  const pathname = usePathname();
+  const pathnames = pathname.split('/').filter((x) => x);
 
   // Don't show breadcrumbs on the home page
   if (pathnames.length === 0) return null;
@@ -24,7 +27,7 @@ export function Breadcrumbs() {
     <nav className="flex items-center text-sm text-slate-500 mb-8" aria-label="Breadcrumb">
       <ol className="flex items-center space-x-2 flex-wrap">
         <li>
-          <Link to="/" className="hover:text-brand-600 transition-colors flex items-center">
+          <Link href="/" className="hover:text-brand-600 transition-colors flex items-center">
             <Home className="w-4 h-4" />
             <span className="sr-only">Home</span>
           </Link>
@@ -42,7 +45,7 @@ export function Breadcrumbs() {
                   {name}
                 </span>
               ) : (
-                <Link to={to} className="hover:text-brand-600 transition-colors capitalize">
+                <Link href={to} className="hover:text-brand-600 transition-colors capitalize">
                   {name}
                 </Link>
               )}
