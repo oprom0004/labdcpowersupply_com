@@ -19,7 +19,7 @@ export default function Applications() {
       keyword: "low noise power supply for RF testing",
       recommendation: {
         name: "Premium Linear Series",
-        specs: "30V / 3A 鈥?<0.35mVrms Ripple",
+        specs: "30V / 3A —<0.35mVrms Ripple",
         link: "https://variabledcpowersupply.com"
       }
     },
@@ -32,7 +32,7 @@ export default function Applications() {
       keyword: "battery simulation power supply",
       recommendation: {
         name: "Advanced Switching Series",
-        specs: "60V / 10A 鈥?Autoranging 鈥?List Mode",
+        specs: "60V / 10A —Autoranging —List Mode",
         link: "https://variabledcpowersupply.com"
       }
     },
@@ -45,7 +45,7 @@ export default function Applications() {
       keyword: "precision dc power supply for semiconductor",
       recommendation: {
         name: "High-Precision Programmable Series",
-        specs: "Remote Sensing 鈥?0.1mA Readback",
+        specs: "Remote Sensing —0.1mA Readback",
         link: "https://variabledcpowersupply.com"
       }
     },
@@ -58,7 +58,7 @@ export default function Applications() {
       keyword: "programmable dc power supply for ATE",
       recommendation: {
         name: "High-Density System Power",
-        specs: "1.5kW 鈥?1U Half-Rack 鈥?LXI/LAN",
+        specs: "1.5kW —1U Half-Rack —LXI/LAN",
         link: "https://variabledcpowersupply.com"
       }
     }

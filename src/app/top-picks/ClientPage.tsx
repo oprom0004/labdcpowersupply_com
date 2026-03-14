@@ -64,7 +64,7 @@ export default function TopPicks() {
             </div>
             <div className="p-8 flex flex-col flex-grow">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Premium Linear Series</h3>
-              <p className="text-brand-600 font-medium mb-6">30V / 3A 鈥?Triple Output</p>
+              <p className="text-brand-600 font-medium mb-6">30V / 3A —Triple Output</p>
 
               <p className="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
                 The undisputed king of clean power. In our latest <strong>dc lab power supply review</strong>, this series delivered an astonishing &lt;0.35mVrms ripple. Perfect for sensitive analog and RF testing.
@@ -108,7 +108,7 @@ export default function TopPicks() {
             </div>
             <div className="p-8 flex flex-col flex-grow">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Advanced Switching Series</h3>
-              <p className="text-slate-500 font-medium mb-6">60V / 10A 鈥?Autoranging</p>
+              <p className="text-slate-500 font-medium mb-6">60V / 10A —Autoranging</p>
 
               <p className="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
                 If you need a versatile <strong>electronics lab dc power supply</strong> that won't break the budget, this autoranging unit replaces multiple traditional supplies while maintaining excellent transient response.
@@ -152,7 +152,7 @@ export default function TopPicks() {
             </div>
             <div className="p-8 flex flex-col flex-grow">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">High-Density System Power</h3>
-              <p className="text-slate-500 font-medium mb-6">Up to 1500W 鈥?Single Output</p>
+              <p className="text-slate-500 font-medium mb-6">Up to 1500W —Single Output</p>
 
               <p className="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
                 Designed for battery simulation, motor testing, and automated test equipment (ATE) racks. This is the <strong>best dc lab power supply</strong> for high-current industrial applications.

@@ -127,18 +127,6 @@ export default function Home() {
                       e.currentTarget.nextElementSibling?.classList.add('flex');
                     }}
                   />
-                  {/* Local Development Placeholder */}
-                  <div className="hidden absolute inset-0 w-full aspect-[4/3] bg-zinc-800/80 backdrop-blur-sm rounded-xl border border-zinc-700/50 flex-col items-center justify-center text-center p-6 z-10">
-                    <div className="w-16 h-16 rounded-full bg-zinc-900 flex items-center justify-center mb-4 border border-zinc-700">
-                      <span className="text-2xl">🔌</span>
-                    </div>
-                    <div className="text-zinc-300 font-medium tracking-wide mb-2">鍥剧墖棰勭暀浣?(Hero Product)</div>
-                    <div className="text-xs text-zinc-500 max-w-[250px] text-center leading-relaxed">
-                      鏈湴寮€鍙戞椂锛岃灏嗙涓€寮犲浘閲嶅懡鍚嶄负<br />
-                      <code className="text-amber-500 bg-zinc-900 px-1.5 py-0.5 rounded mx-1">hero-product.png</code><br />
-                      骞舵斁鍏ラ」鐩殑 <code className="text-zinc-300">public</code> 鏂囦欢澶逛腑銆?
-                    </div>
-                  </div>
                 </div>
 
                 {/* AR Annotation 1: Display */}
