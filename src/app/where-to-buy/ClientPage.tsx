@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ShoppingCart, Shield, Truck, ExternalLink } from 'lucide-react';
 import FAQSection from '@/components/FAQSection';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function WhereToBuy() {
   const buyFaqs = [
@@ -28,7 +29,8 @@ export default function WhereToBuy() {
   return (
     <div className="w-full py-16 bg-slate-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <Breadcrumbs />
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-3xl mx-auto mb-16"
@@ -43,7 +45,7 @@ export default function WhereToBuy() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-20">
           {/* Official Store */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1 }}
@@ -82,7 +84,7 @@ export default function WhereToBuy() {
 
           {/* Value Props */}
           <div className="flex flex-col justify-center space-y-8">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -99,7 +101,7 @@ export default function WhereToBuy() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -120,7 +122,7 @@ export default function WhereToBuy() {
 
         {/* FAQ Section */}
         <div className="mb-20">
-          <FAQSection 
+          <FAQSection
             title="Purchasing & Shipping FAQs"
             description="Everything you need to know about ordering, logistics, and support."
             faqs={buyFaqs}

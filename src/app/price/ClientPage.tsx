@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Check, ExternalLink } from 'lucide-react';
 import FAQSection from '@/components/FAQSection';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function Price() {
   const priceFaqs = [
@@ -28,7 +29,9 @@ export default function Price() {
   return (
     <div className="w-full py-16 bg-slate-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <Breadcrumbs />
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-3xl mx-auto mb-16"
@@ -43,7 +46,7 @@ export default function Price() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Tier 1 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -72,7 +75,7 @@ export default function Price() {
           </motion.div>
 
           {/* Tier 2 - Highlighted */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -113,7 +116,7 @@ export default function Price() {
           </motion.div>
 
           {/* Tier 3 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -145,7 +148,7 @@ export default function Price() {
 
         {/* FAQ Section */}
         <div className="mt-24">
-          <FAQSection 
+          <FAQSection
             title="Pricing & Investment FAQs"
             description="Understand the value behind premium laboratory power supplies."
             faqs={priceFaqs}
