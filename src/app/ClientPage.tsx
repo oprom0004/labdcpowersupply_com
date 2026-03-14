@@ -348,7 +348,7 @@ export default function Home() {
 
               <img
                 src="/bestseller-product.png"
-                alt="eTM-2002C Adjustable DC Power Supply"
+                alt="eTM-22020C High Voltage DC Power Supply"
                 className="w-full h-auto object-contain drop-shadow-xl relative z-20 transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
@@ -361,7 +361,7 @@ export default function Home() {
               {/* Specs Overlay */}
               <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm border border-zinc-200 px-3 py-2 shadow-sm z-30">
                 <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-1">Model</div>
-                <div className="font-mono font-bold text-zinc-900">eTM-2002C</div>
+                <div className="font-mono font-bold text-zinc-900">eTM-22020C</div>
               </div>
             </div>
 
@@ -378,7 +378,7 @@ export default function Home() {
               </h2>
 
               <p className="text-zinc-600 text-lg leading-relaxed mb-10">
-                Not every project requires micro-volt precision, but every bench needs unwavering reliability. The eTM-2002C delivers robust, continuous power with an intuitive dual-display interface, making it the most cost-effective workhorse for production lines, repair centers, and educational labs.
+                Not every project requires micro-volt precision, but every bench needs unwavering reliability. The eTM-22020C delivers robust, continuous high-voltage power with an intuitive quad-display interface, making it the most cost-effective workhorse for production lines, testing centers, and automotive applications.
               </p>
 
               {/* Spec Grid */}
@@ -406,10 +406,15 @@ export default function Home() {
               </div>
 
               <div className="mt-10">
-                <button className="flex items-center gap-2 text-sm font-bold text-zinc-900 uppercase tracking-widest hover:text-amber-600 transition-colors group">
+                <a
+                  href="https://variabledcpowersupply.com/220v-dc-power-supplies/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-zinc-900 uppercase tracking-widest hover:text-amber-600 transition-colors group"
+                >
                   View Full Specifications
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </button>
+                </a>
               </div>
             </div>
 
