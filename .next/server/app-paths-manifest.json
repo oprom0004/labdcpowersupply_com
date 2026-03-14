@@ -2,10 +2,10 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/robots.txt/route": "app/robots.txt/route.js",
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/top-picks/page": "app/top-picks/page.js",
   "/page": "app/page.js",
-  "/price/page": "app/price/page.js",
   "/applications/page": "app/applications/page.js",
+  "/price/page": "app/price/page.js",
+  "/top-picks/page": "app/top-picks/page.js",
   "/where-to-buy/page": "app/where-to-buy/page.js",
   "/how-to-choose/page": "app/how-to-choose/page.js"
 }

@@ -130,7 +130,7 @@ export default function Home() {
                   {/* Local Development Placeholder */}
                   <div className="hidden absolute inset-0 w-full aspect-[4/3] bg-zinc-800/80 backdrop-blur-sm rounded-xl border border-zinc-700/50 flex-col items-center justify-center text-center p-6 z-10">
                     <div className="w-16 h-16 rounded-full bg-zinc-900 flex items-center justify-center mb-4 border border-zinc-700">
-                      <span className="text-2xl">馃攲</span>
+                      <span className="text-2xl">🔌</span>
                     </div>
                     <div className="text-zinc-300 font-medium tracking-wide mb-2">鍥剧墖棰勭暀浣?(Hero Product)</div>
                     <div className="text-xs text-zinc-500 max-w-[250px] text-center leading-relaxed">
@@ -297,22 +297,22 @@ export default function Home() {
               {
                 title: "RF & Communications",
                 desc: "Ultra-low noise linear supplies for sensitive transceiver testing.",
-                icon: "馃摗"
+                icon: "📡"
               },
               {
                 title: "Automotive & EV",
                 desc: "High-power autoranging units for battery simulation and motor drives.",
-                icon: "馃殫"
+                icon: "🚗"
               },
               {
                 title: "Semiconductor",
                 desc: "High-resolution readback for precise component characterization.",
-                icon: "馃敩"
+                icon: "🔬"
               },
               {
                 title: "ATE Systems",
                 desc: "Fully programmable units with LAN/LXI and SCPI support.",
-                icon: "鈿欙笍"
+                icon: "⚙️"
               }
             ].map((app, idx) => (
               <motion.div

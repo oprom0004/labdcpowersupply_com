@@ -13,7 +13,7 @@ export default function Applications() {
     {
       id: "rf-communications",
       title: "RF & Wireless Communications",
-      icon: "馃摗",
+      icon: "📡",
       painPoint: "Radio frequency circuits and transceurs are extremely sensitive to power supply noise. Even millivolts of ripple can pollute the test signal and lead to false readings.",
       solution: "We recommend our premium Linear DC Power Supplies. With ripple and noise specifications below 0.35mVrms, they provide the ultra-clean power necessary for testing sensitive analog and RF components without introducing interference.",
       keyword: "low noise power supply for RF testing",
@@ -26,7 +26,7 @@ export default function Applications() {
     {
       id: "automotive-ev",
       title: "Automotive Electronics & EV",
-      icon: "馃殫",
+      icon: "🚗",
       painPoint: "Testing automotive components requires simulating engine cranking profiles (voltage drops) and handling high-power demands for EV battery charging and motor drives.",
       solution: "Our High-Power Autoranging DC Power Supplies are ideal. They feature built-in arbitrary waveform generators (List mode) to simulate automotive voltage profiles, and their autoranging capability provides maximum power across a wide range of voltage and current combinations.",
       keyword: "battery simulation power supply",
@@ -39,7 +39,7 @@ export default function Applications() {
     {
       id: "semiconductor",
       title: "Semiconductor Characterization",
-      icon: "馃敩",
+      icon: "🔬",
       painPoint: "Analyzing the I-V characteristics of diodes, transistors, and ICs requires extremely precise voltage sourcing and the ability to measure micro-ampere currents accurately.",
       solution: "Look for our High-Resolution Programmable Supplies. With 1mV / 0.1mA readback resolution and remote sensing capabilities (to compensate for voltage drops in test leads), they ensure the voltage at the Device Under Test (DUT) is exactly what you programmed.",
       keyword: "precision dc power supply for semiconductor",
@@ -52,7 +52,7 @@ export default function Applications() {
     {
       id: "ate-systems",
       title: "Automated Test Equipment (ATE)",
-      icon: "鈿欙笍",
+      icon: "⚙️",
       painPoint: "Production lines and automated test racks require power supplies that can be seamlessly integrated, remotely controlled, and fit into standard 19-inch racks without taking up too much space.",
       solution: "Our High-Density Programmable DC Power Supplies are designed for ATE. They support standard SCPI commands over LAN (LXI), USB, and GPIB interfaces, and offer high power density (e.g., 1.5kW in a 1U half-rack form factor).",
       keyword: "programmable dc power supply for ATE",
