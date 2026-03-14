@@ -4,8 +4,8 @@
   "/sitemap.xml/route": "/sitemap.xml",
   "/how-to-choose/page": "/how-to-choose",
   "/top-picks/page": "/top-picks",
-  "/page": "/",
-  "/price/page": "/price",
+  "/where-to-buy/page": "/where-to-buy",
   "/applications/page": "/applications",
-  "/where-to-buy/page": "/where-to-buy"
+  "/price/page": "/price",
+  "/page": "/"
 }
