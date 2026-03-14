@@ -2,10 +2,10 @@
   "/_not-found/page": "/_not-found",
   "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
-  "/applications/page": "/applications",
   "/how-to-choose/page": "/how-to-choose",
-  "/page": "/",
-  "/where-to-buy/page": "/where-to-buy",
   "/top-picks/page": "/top-picks",
-  "/price/page": "/price"
+  "/page": "/",
+  "/price/page": "/price",
+  "/applications/page": "/applications",
+  "/where-to-buy/page": "/where-to-buy"
 }

@@ -121,7 +121,6 @@ export default function Home() {
                     src="/hero-product.png"
                     alt="eTM-K1560PL+ Programmable DC Power Supply"
                     className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative z-20"
-                    style={{ mixBlendMode: 'multiply' }}
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                       e.currentTarget.nextElementSibling?.classList.remove('hidden');
@@ -351,7 +350,6 @@ export default function Home() {
                 src="/bestseller-product.png"
                 alt="eTM-2002C Adjustable DC Power Supply"
                 className="w-full h-auto object-contain drop-shadow-xl relative z-20 transition-transform duration-700 group-hover:scale-105"
-                style={{ mixBlendMode: 'multiply' }}
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.nextElementSibling?.classList.remove('hidden');
