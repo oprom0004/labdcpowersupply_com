@@ -1,9 +1,11 @@
 {
   "/_not-found/page": "/_not-found",
-  "/how-to-choose/page": "/how-to-choose",
-  "/page": "/",
-  "/top-picks/page": "/top-picks",
-  "/price/page": "/price",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
   "/applications/page": "/applications",
-  "/where-to-buy/page": "/where-to-buy"
+  "/page": "/",
+  "/where-to-buy/page": "/where-to-buy",
+  "/price/page": "/price",
+  "/how-to-choose/page": "/how-to-choose",
+  "/top-picks/page": "/top-picks"
 }

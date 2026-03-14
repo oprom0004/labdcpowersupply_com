@@ -7,8 +7,10 @@ import { Star, Award, Zap, ShieldCheck, ExternalLink, ArrowRight } from 'lucide-
 import FAQSection from '@/components/FAQSection';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
+const YEAR = new Date().getFullYear();
+
 export default function TopPicks() {
-  
+
 
   const topPicksFaqs = [
     {
@@ -30,17 +32,17 @@ export default function TopPicks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs />
         {/* Header Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-slate-800 text-slate-100 text-xs font-mono font-bold uppercase tracking-widest mb-6 border border-slate-700 shadow-sm">
             <Award className="w-3.5 h-3.5 text-slate-300" />
-            <span>2026 Editor's Choices</span>
+            <span>{YEAR} Editor&apos;s Choices</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
-            Best Lab DC Power Supplies of 2026
+            Best Lab DC Power Supplies of {YEAR}
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed">
             Our top picks for high-precision <strong>variable</strong> and <strong>programmable</strong> units for every engineering budget. Whether you need an ultra-low noise linear supply or a high-density ATE unit, find the perfect match for your <strong>benchtop</strong>.
@@ -49,9 +51,9 @@ export default function TopPicks() {
 
         {/* Top Picks Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          
+
           {/* Pick 1: Best Overall */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -63,11 +65,11 @@ export default function TopPicks() {
             <div className="p-8 flex flex-col flex-grow">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Premium Linear Series</h3>
               <p className="text-brand-600 font-medium mb-6">30V / 3A 鈥?Triple Output</p>
-              
+
               <p className="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
                 The undisputed king of clean power. In our latest <strong>dc lab power supply review</strong>, this series delivered an astonishing &lt;0.35mVrms ripple. Perfect for sensitive analog and RF testing.
               </p>
-              
+
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2 text-sm text-slate-700">
                   <ShieldCheck className="w-5 h-5 text-emerald-500 shrink-0" />
@@ -82,7 +84,7 @@ export default function TopPicks() {
                   <span>Standard USB/LAN (LXI) interfaces</span>
                 </li>
               </ul>
-              
+
               <a
                 href="https://variabledcpowersupply.com"
                 target="_blank"
@@ -95,7 +97,7 @@ export default function TopPicks() {
           </motion.div>
 
           {/* Pick 2: Best Value */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -107,11 +109,11 @@ export default function TopPicks() {
             <div className="p-8 flex flex-col flex-grow">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Advanced Switching Series</h3>
               <p className="text-slate-500 font-medium mb-6">60V / 10A 鈥?Autoranging</p>
-              
+
               <p className="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
                 If you need a versatile <strong>electronics lab dc power supply</strong> that won't break the budget, this autoranging unit replaces multiple traditional supplies while maintaining excellent transient response.
               </p>
-              
+
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2 text-sm text-slate-700">
                   <Zap className="w-5 h-5 text-amber-500 shrink-0" />
@@ -126,7 +128,7 @@ export default function TopPicks() {
                   <span>Compact 1U half-rack form factor</span>
                 </li>
               </ul>
-              
+
               <a
                 href="https://variabledcpowersupply.com"
                 target="_blank"
@@ -139,7 +141,7 @@ export default function TopPicks() {
           </motion.div>
 
           {/* Pick 3: Best High Power */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -151,11 +153,11 @@ export default function TopPicks() {
             <div className="p-8 flex flex-col flex-grow">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">High-Density System Power</h3>
               <p className="text-slate-500 font-medium mb-6">Up to 1500W 鈥?Single Output</p>
-              
+
               <p className="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
                 Designed for battery simulation, motor testing, and automated test equipment (ATE) racks. This is the <strong>best dc lab power supply</strong> for high-current industrial applications.
               </p>
-              
+
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2 text-sm text-slate-700">
                   <ShieldCheck className="w-5 h-5 text-slate-400 shrink-0" />
@@ -170,7 +172,7 @@ export default function TopPicks() {
                   <span>Analog programming and monitoring</span>
                 </li>
               </ul>
-              
+
               <a
                 href="https://variabledcpowersupply.com"
                 target="_blank"
@@ -186,7 +188,7 @@ export default function TopPicks() {
 
         {/* FAQ Section */}
         <div className="mb-20">
-          <FAQSection 
+          <FAQSection
             title="DC Lab Power Supply Reviews & Buying FAQs"
             description="Common questions from our readers when selecting the best power supply for their bench."
             faqs={topPicksFaqs}
