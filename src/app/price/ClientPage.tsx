@@ -22,10 +22,10 @@ export default function Price() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-            {pricingConfig.title}
+            {pricingConfig.hero.title}
           </h1>
           <p className="text-lg text-slate-600">
-            {pricingConfig.description}
+            {pricingConfig.hero.description}
           </p>
         </motion.div>
 
@@ -36,39 +36,30 @@ export default function Price() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * (idx + 1) }}
-              className={`${tier.isPopular ? 'bg-slate-900 border-slate-800 shadow-xl relative transform md:-translate-y-4' : 'bg-white border-slate-200 shadow-sm'
+              className={`${tier.popular ? 'bg-slate-900 border-slate-800 shadow-xl relative transform md:-translate-y-4' : 'bg-white border-slate-200 shadow-sm'
                 } rounded-2xl border p-8 flex flex-col`}
             >
-              {tier.isPopular && (
+              {tier.popular && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                   Most Popular
                 </div>
               )}
-              <h3 className={`text-xl font-semibold mb-2 ${tier.isPopular ? 'text-white' : 'text-slate-900'}`}>{tier.name}</h3>
+              <h3 className={`text-xl font-semibold mb-2 ${tier.popular ? 'text-white' : 'text-slate-900'}`}>{tier.name}</h3>
               <div className="mb-6">
-                <span className={`text-4xl font-bold ${tier.isPopular ? 'text-white' : 'text-slate-900'}`}>{tier.priceRange}</span>
+                <span className={`text-4xl font-bold ${tier.popular ? 'text-white' : 'text-slate-900'}`}>{tier.price}</span>
               </div>
-              <p className={`mb-8 text-sm h-16 ${tier.isPopular ? 'text-slate-400' : 'text-slate-600'}`}>
+              <p className={`mb-8 text-sm h-16 ${tier.popular ? 'text-slate-400' : 'text-slate-600'}`}>
                 {tier.description}
               </p>
               <ul className="space-y-4 mb-8 flex-grow">
                 {tier.features.map((feature, i) => (
-                  <li key={i} className={`flex items-start gap-3 text-sm ${tier.isPopular ? 'text-slate-300' : 'text-slate-700'}`}>
-                    <Check className={`w-5 h-5 shrink-0 ${tier.isPopular ? 'text-brand-400' : 'text-brand-500'}`} />
+                  <li key={i} className={`flex items-start gap-3 text-sm ${tier.popular ? 'text-slate-300' : 'text-slate-700'}`}>
+                    <Check className={`w-5 h-5 shrink-0 ${tier.popular ? 'text-brand-400' : 'text-brand-500'}`} />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-              {tier.cta && (
-                <a
-                  href={tier.cta.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-3 px-4 bg-brand-500 hover:bg-brand-400 text-white text-center rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
-                >
-                  {tier.cta.text} <ExternalLink className="w-4 h-4" />
-                </a>
-              )}
+
             </motion.div>
           ))}
         </div>
