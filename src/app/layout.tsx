@@ -13,9 +13,6 @@ export const metadata: Metadata = {
         template: siteConfig.seo.titleTemplate,
     },
     description: siteConfig.seo.defaultDescription,
-    alternates: {
-        canonical: '/',
-    },
     openGraph: {
         siteName: siteConfig.siteName,
         locale: 'en_US',

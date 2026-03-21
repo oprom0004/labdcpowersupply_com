@@ -6,6 +6,9 @@ import homeConfig from '@/content/home.json';
 export const metadata: Metadata = {
   title: homeConfig.metaTitle,
   description: homeConfig.metaDescription,
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function Page() {
